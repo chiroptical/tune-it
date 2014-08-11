@@ -1,0 +1,31 @@
+# Tune-It -- this line is a comment
+
+# geometry block with non-standard options
+geometry{
+    option noautoz nocenter symmetry c2v units angstrom
+    O     0.000000    0.000000    0.120600
+    H     0.000000    0.766900   -0.482200
+    H     0.000000   -0.766900   -0.482200
+}
+
+# A global basis set
+basis{
+    option global
+    type 6-31+g*
+}
+
+# A nonzero charge would go here
+charge 0
+
+# Non standard options could go here
+dft{
+    grid xfine
+    convergence energy 1.d-8 nolevelshifting
+    iterations 100
+}
+
+# 2d tuning block
+tune{
+    dimension 2
+    step base
+}
